@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package rating;
+
+message Review {
+  string product_id = 1;
+  int32 rating = 2;
+  string review = 3;
+}
+
+service RatingServicer {
+  rpc AddReview(Review) returns (Review) {}
+}
